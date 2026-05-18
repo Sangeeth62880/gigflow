@@ -1,4 +1,4 @@
-# 🚀 GigFlow — Smart Leads Operations Platform
+# GigFlow — Smart Leads Operations Platform
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18-61dafb.svg)](https://react.dev/)
@@ -6,11 +6,11 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933.svg)](https://nodejs.org/)
 [![Docker](https://img.shields.io/badge/Docker-Compliant-2496ed.svg)](https://www.docker.com/)
 
-**GigFlow** is a premium, high-density, typography-first Sales Operations and Lead Management platform. Engineered with a strict MERN stack under Clean Architecture principles, GigFlow is inspired by the sleek monochrome, white-canvas design language defined by the Cal.com design system.
+GigFlow is a premium, high-density, typography-first Sales Operations and Lead Management platform. Engineered with a strict MERN stack under Clean Architecture principles, GigFlow is inspired by the sleek monochrome, white-canvas design language defined by the Cal.com design system.
 
 ---
 
-## 🏗️ Clean System Architecture
+## Clean System Architecture
 
 GigFlow strictly decouples the client side, server business layers, and data layers to achieve perfect horizontal scaling and complete type-safety.
 
@@ -41,21 +41,21 @@ flowchart TD
 
 ---
 
-## ✨ Primary Core Features
+## Primary Core Features
 
-1. **🔐 Multi-Role Auth Systems**: Secure registration, dynamic JWT login, and robust routing guards (`ProtectedRoute.tsx` and `RoleGate.tsx`).
-2. **👥 Role-Based Access Control (RBAC)**:
+1. **Multi-Role Auth Systems**: Secure registration, dynamic JWT login, and robust routing guards (`ProtectedRoute.tsx` and `RoleGate.tsx`).
+2. **Role-Based Access Control (RBAC)**:
    * **Sales**: Operates in isolated workspaces. Can only perform CRUD operations on leads they personally created.
    * **Admin**: Has absolute global access to view, edit, update status/source, and delete any lead in the pipeline, with active creator attribution tracking.
-3. **📋 Lead Lifecycle CRM**: Real-time CRUD capabilities supporting state transitions (`New`, `Contacted`, `Qualified`, `Lost`) and lead attribution.
-4. **🔍 Advanced Compound Multi-Filtering**: Dynamic combined search (text checking name and email) with debounced state inputs alongside status, source, and sort filters.
-5. **📄 High-Performance Pagination**: Strict backend skip/limit paging providing rich navigational metadata back to client lists.
-6. **📥 Client-Side CSV Export**: Dynamic, single-click JSON-to-CSV compilation matching active workspace filters.
-7. **⚙️ Admin Control Panel**: Live node database KPI monitors, security controls, dynamic user management lists, and rate limiters.
+3. **Lead Lifecycle CRM**: Real-time CRUD capabilities supporting state transitions (`New`, `Contacted`, `Qualified`, `Lost`) and lead attribution.
+4. **Advanced Compound Multi-Filtering**: Dynamic combined search (text checking name and email) with debounced state inputs alongside status, source, and sort filters.
+5. **High-Performance Pagination**: Strict backend skip/limit paging providing rich navigational metadata back to client lists.
+6. **Client-Side CSV Export**: Dynamic, single-click JSON-to-CSV compilation matching active workspace filters.
+7. **Admin Control Panel**: Live node database KPI monitors, security controls, dynamic user management lists, and rate limiters.
 
 ---
 
-## 🛠️ Technology Specs
+## Technology Specs
 
 | Segment | Technology Stack | Key Purpose |
 | :--- | :--- | :--- |
@@ -70,7 +70,7 @@ flowchart TD
 
 ---
 
-## 📁 Repository Directory Hierarchy
+## Repository Directory Hierarchy
 
 ```text
 gigflow/
@@ -95,7 +95,7 @@ gigflow/
 
 ---
 
-## 🚀 Instant Quick Start
+## Instant Quick Start
 
 ### 1. Environment Configurations
 Clone this repository and create your local environment file in the root directory:
@@ -139,7 +139,7 @@ npm run dev
 
 ---
 
-## 🧪 Terminal-Based E2E Integration Tests (Non-Browser)
+## Terminal-Based E2E Integration Tests (Non-Browser)
 
 GigFlow includes a native, non-browser integration test suite that tests the REST API endpoints, JWT authentication, RBAC boundaries, and workspace data isolations directly in the console.
 
