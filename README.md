@@ -139,6 +139,29 @@ npm run dev
 
 ---
 
+## Cloud Deployment Instructions (Monorepo)
+
+GigFlow's Monorepo architecture has been pre-configured with bridge scripts for seamless cloud deployment.
+
+### 1. Deploying the Backend (Render.com)
+1. Create a new Web Service on Render and connect your GitHub repository.
+2. Set the **Root Directory** to `server`.
+3. Render will automatically detect the `package.json` and start the server.
+4. **CRITICAL**: Add these Environment Variables in the Render Dashboard:
+   - `MONGO_URI` (Must allow `0.0.0.0/0` in Atlas Network Access)
+   - `JWT_SECRET`
+   - `JWT_EXPIRES_IN`
+   - `CLIENT_URL` (Your live frontend URL)
+
+### 2. Deploying the Frontend (Vercel or Netlify)
+1. Connect your repository to Vercel/Netlify.
+2. Do **not** change the Root Directory. Leave it as the default repository root (`./`).
+3. The root `package.json` contains a bridge script that automatically builds the `client/` app and exposes the `public/` folder, completely natively.
+4. **CRITICAL**: Add this Environment Variable in your Vercel/Netlify Dashboard:
+   - `VITE_API_URL` (Set this to your live Render API URL, e.g., `https://your-app.onrender.com/api`)
+
+---
+
 ## Terminal-Based E2E Integration Tests (Non-Browser)
 
 GigFlow includes a native, non-browser integration test suite that tests the REST API endpoints, JWT authentication, RBAC boundaries, and workspace data isolations directly in the console.
